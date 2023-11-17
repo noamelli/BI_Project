@@ -15,6 +15,7 @@ pd.set_option('display.max_rows', None)
 city_date_counts = df.groupby(['city', 'rocket_date', 'rocket_time', 'category_desc']).size().reset_index(name='count')
 sorted_city_date_counts = city_date_counts.sort_values(by='count', ascending=False)
 sorted_city_date_counts.to_excel("rockets_data.xlsx", sheet_name="data", index=False)
+#print
 
 
 
